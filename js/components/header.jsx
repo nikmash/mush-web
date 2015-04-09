@@ -13,6 +13,7 @@ var header = React.createClass({
 				<h1>{route.name}</h1>
 				<nav>
 					<Link to="inbox">Inbox</Link>
+					<Link to="outbox">Outbox</Link>
 				</nav>
 			</header>
 		);

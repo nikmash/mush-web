@@ -22,8 +22,8 @@ var frame = React.createClass({
 		}
 
 		return (
-			<section onMouseLeave={Frame.actions.close} className={cx}>
-				<iframe  sandbox="allow-forms allow-scripts" src={url}></iframe>
+			<section className={cx}>
+				<iframe frameborder="0" allowfullscreen src={url}></iframe>
 				<i onClick={Frame.actions.close} ></i>
 			</section>
 		);

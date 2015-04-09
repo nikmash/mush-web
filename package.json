@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "debug": "node server.js",
-    "build": "node node_modules/webpack/bin/webpack.js --colors --progress"
+    "build": "node node_modules/webpack/bin/webpack.js -p --colors --progress"
   },
   "author": "",
   "license": "BSD",

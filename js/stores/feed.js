@@ -2,22 +2,23 @@ var Reflux = require("reflux")
 var axios = require("axios")
 
 module.exports.actions = Reflux.createActions([
-	"inbox"
+	"refresh",
 ])
 
 var data = { 
 	inbox : [],
+	saved : [],
 	outbox : []
 };
 
 module.exports.store = Reflux.createStore({
 	listenables : [module.exports.actions],
-	onInbox: function() {
-		axios.get("me/inbox").then(function(response) {
-			this.trigger({
-				inbox : response.data
-			})
+	onRefresh : function(seg) {
+		axios.get("me/" + seg).then(function(response) {
+			data[seg] = response.data;
+			this.trigger(data);
 		}.bind(this))
+
 	},
 	getInitialState: function() {
 		return data

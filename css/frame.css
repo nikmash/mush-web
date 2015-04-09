@@ -1,14 +1,17 @@
 section.frame {
     position: fixed;
-    width: 1024px;
     right: -15px;
+    left: 0px;
     top: 0px;
     height: 100%;
     border-left: 1px solid #EDEDED;
     display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
 }
 section.frame.active {
-    display: block;
+    display: flex;
 }
 section.frame i {
     position: absolute;
@@ -16,13 +19,13 @@ section.frame i {
     top: 0px;
     width: 50px;
     height: 50px;
-    background: url(http://cdn.flaticon.com/png/256/59836.png) white no-repeat center;
+    background: url(http://cdn.flaticon.com/png/256/59836.png)  no-repeat center;
     background-size: 30%;
     z-index: 1000;
     cursor: pointer;
 }
 section.frame iframe {
-    width: 100%;
-    height: 100%;
     background: white;
+    width: 600px;
+    height: 400px;
 }
