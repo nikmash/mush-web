@@ -38,11 +38,13 @@ section.feed > ul > li > summary > h2 {
 section.feed > ul > li > summary ul.users {
     display: flex;
     color: #999;
+    flex-wrap: wrap;
 }
 section.feed > ul > li > summary ul.users li {
     display: flex;
     align-items: center;
     margin-right: 30px;
+    margin-bottom: 20px;
 }
 section.feed > ul > li > summary ul.users img {
     width: 40px;
