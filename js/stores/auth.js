@@ -1,8 +1,8 @@
 var Reflux = require("reflux")
 var axios = require("axios");
 axios.interceptors.request.use(function(config) {
-	//config.url = "http://mush.io/api/" + config.url;
-	config.url = "http://api.ironbay.digital/" + config.url;
+	config.url = "http://mush.io/api/" + config.url;
+	//config.url = "http://api.ironbay.digital/" + config.url;
 	return config;
 });
 
