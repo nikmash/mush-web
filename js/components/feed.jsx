@@ -5,6 +5,7 @@ var Img = require("components/image.jsx")
 
 var Feed = require("stores/feed.js")
 var Frame = require("stores/frame.js")
+var Tag = require("stores/tag.js")
 
 var feed = React.createClass({
 	mixins : [Reflux.connect(Feed.store, "feed")],
@@ -49,22 +50,22 @@ var feed = React.createClass({
 									<h2>
 										{feed.site.name || feed.site.domain}
 										<strong className="read" onClick={Feed.actions.read.bind(null, feed)}>New</strong>
-										<strong className="tag">Tag</strong>
+										<strong className="tag" onClick={Tag.actions.load.bind(null, feed.post.id)}>Tag</strong>
 									</h2>
 									<ul className="users">
 									{
 										feed.mentions.map(function(mention) {
 											return (
-												<li>
+												<li >
 													<img src={mention.avatar || "http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png"} />
 													<summary>
 														<h1>{mention.name}</h1>
-														<h2>{route == "inbox" ? "Tagged you" : "Is mentioned"}</h2>
+														<h2>{route == "inbox" ? "Tagged you" : "Is tagged"}</h2>
 													</summary>
 												</li>
 											)
 
-										})
+										}.bind(this))
 									}
 									</ul>
 								</summary>

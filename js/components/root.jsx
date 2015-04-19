@@ -5,6 +5,7 @@ var Router = require('react-router');
 
 var Header = require("components/header.jsx")
 var Frame = require("components/frame.jsx")
+var Tag = require("components/tag.jsx")
 var Login = require("components/login.jsx")
 var Auth = require("stores/auth.js");
 
@@ -20,6 +21,7 @@ var app = React.createClass({
 			<section className="root">
 				<Header />
 				<Frame />
+				<Tag />
 				<section className="main">
 					<Router.RouteHandler />
 				</section>
