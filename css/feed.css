@@ -11,6 +11,10 @@ section.feed > ul > li {
     padding-bottom: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid #EDEDED;
+    border-left: 4px solid transparent;    /*padding-left: 20px;*/
+}
+section.feed > ul > li.active {
+    border-left-color: #161A1E;
 }
 section.feed > ul > li > img {
     width: auto;
@@ -25,7 +29,8 @@ section.feed > ul > li > summary {
     color: #161A1E;
 }
 section.feed > ul > li.read > summary > h1 {
-    color: #999;
+
+    /*color: #999;*/
 }
 section.feed > ul > li > summary > h1 {
     font-weight: 600;
@@ -39,8 +44,13 @@ section.feed > ul > li > summary > h2 {
     color: #999;
     margin-bottom: 10px;
 }
-section.feed > ul > li.read > summary > h2 > strong {
-    opacity: 0;
+section.feed > ul > li.read > summary > h2 > strong.read {
+    display: none;
+}
+section.feed > ul > li > summary > h2 > strong.tag {
+    background: transparent;
+    color: #161A1E;
+    border: 1px solid;
 }
 section.feed > ul > li > summary > h2 > strong {
     opacity: 1;

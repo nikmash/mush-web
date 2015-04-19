@@ -48,7 +48,8 @@ var feed = React.createClass({
 									<h1 onClick={this.open.bind(this, feed)}>{feed.link.title}</h1>
 									<h2>
 										{feed.site.name || feed.site.domain}
-										<strong onClick={Feed.actions.read.bind(null, feed)}>New</strong>
+										<strong className="read" onClick={Feed.actions.read.bind(null, feed)}>New</strong>
+										<strong className="tag">Tag</strong>
 									</h2>
 									<ul className="users">
 									{
@@ -58,7 +59,7 @@ var feed = React.createClass({
 													<img src={mention.avatar || "http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png"} />
 													<summary>
 														<h1>{mention.name}</h1>
-														<h2>{route == "inbox" ? "Mentioned you" : "Is mentioned"}</h2>
+														<h2>{route == "inbox" ? "Tagged you" : "Is mentioned"}</h2>
 													</summary>
 												</li>
 											)
