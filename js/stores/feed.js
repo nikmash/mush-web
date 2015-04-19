@@ -3,6 +3,7 @@ var axios = require("axios")
 
 module.exports.actions = Reflux.createActions([
 	"refresh",
+	"read"
 ])
 
 var data = { 
@@ -19,6 +20,11 @@ module.exports.store = Reflux.createStore({
 			this.trigger(data);
 		}.bind(this))
 
+	},
+	onRead : function(item) {
+		axios.post("post/" + item.post.id + "/read");
+		item.read = true;
+		this.trigger(data);
 	},
 	getInitialState: function() {
 		return data

@@ -1,5 +1,5 @@
 require("feed.css")
-var React = require('react');
+var React = require('react/addons');
 var Reflux = require("reflux")
 var Img = require("components/image.jsx")
 
@@ -38,13 +38,18 @@ var feed = React.createClass({
 				<ul>
 				{
 					this.state.feed[route].map(function(feed) {
-							console.log(feed)
+						var read = React.addons.classSet({
+							read : feed.read || route=="outbox"
+						})
 						return (
-							<li onClick={this.open.bind(this, feed)}>
+							<li className={read}>
 								<summary>
 									<h3><strong>{feed.user.name}</strong> shared this</h3>
-									<h1>{feed.link.title}</h1>
-									<h2>{feed.site.name || feed.site.domain}</h2>
+									<h1 onClick={this.open.bind(this, feed)}>{feed.link.title}</h1>
+									<h2>
+										{feed.site.name || feed.site.domain}
+										<strong onClick={Feed.actions.read.bind(null, feed)}>New</strong>
+									</h2>
 									<ul className="users">
 									{
 										feed.mentions.map(function(mention) {
