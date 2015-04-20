@@ -22,8 +22,8 @@ section.tag .wrap {
 section.tag .wrap header, section.tag .wrap footer {
     background: #3498db;
     text-align: center;
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
     color: white;
     font-weight: bold;
     text-transform: uppercase;

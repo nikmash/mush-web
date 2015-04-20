@@ -9,7 +9,7 @@ var image = React.createClass({
 		var w = this.props.width;
 		var h = this.props.height;
 		return (
-			<img src={Format.Crop(this.props.src, h)}  />
+			<img src={Format.Crop(this.props.src, h*2)}  />
 		);
 	}
 
