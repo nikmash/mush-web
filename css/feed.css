@@ -44,15 +44,15 @@ section.feed > ul > li > summary > h2 {
     color: #999;
     margin-bottom: 10px;
 }
-section.feed > ul > li.read > summary > h2 > strong.read {
+section.feed > ul > li.read > summary > h2 > a.read {
     display: none;
 }
-section.feed > ul > li > summary > h2 > strong.tag {
+section.feed > ul > li > summary > h2 > a.tag {
     background: transparent;
     color: #161A1E;
     border: 1px solid;
 }
-section.feed > ul > li > summary > h2 > strong {
+section.feed > ul > li > summary > h2 > a {
     opacity: 1;
     transition: 300ms all;
     display: inline-block;

@@ -1,6 +1,7 @@
 require("feed.css")
 var React = require('react/addons');
 var Reflux = require("reflux")
+var Link = require("react-router").Link;
 var Img = require("components/image.jsx")
 
 var Feed = require("stores/feed.js")
@@ -14,10 +15,18 @@ var feed = React.createClass({
 	},
 	componentWillMount: function() {
 		var route = this.context.router.getCurrentRoutes()[1].name;
+		if(route == "search") {
+			Feed.actions.search(this.context.router.getCurrentQuery().link)
+			return
+		}
 		Feed.actions.refresh(route);
 	},
 	componentWillReceiveProps: function(nextProps) {
 		var route = this.context.router.getCurrentRoutes()[1].name;
+		if(route == "search") {
+			Feed.actions.search(this.context.router.getCurrentQuery().link)
+			return
+		}
 		Feed.actions.refresh(route);
 		
 	},
@@ -49,8 +58,9 @@ var feed = React.createClass({
 									<h1 onClick={this.open.bind(this, feed)}>{feed.link.title}</h1>
 									<h2>
 										{feed.site.name || feed.site.domain}
-										<strong className="read" onClick={Feed.actions.read.bind(null, feed)}>New</strong>
-										<strong className="tag" onClick={Tag.actions.load.bind(null, feed.post.id)}>Tag</strong>
+										<a className="read" onClick={Feed.actions.read.bind(null, feed)}>New</a>
+										<a className="tag" onClick={Tag.actions.load.bind(null, feed.post.id)}>Tag</a>
+										<Link to="search" query={{link : feed.link.id}} >Explore</Link>
 									</h2>
 									<ul className="users">
 									{

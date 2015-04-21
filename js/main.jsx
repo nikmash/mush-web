@@ -14,6 +14,7 @@ var routes = (
 		<Route name="inbox" handler={Feed} />
 		<Route name="outbox" handler={Feed} />
 		<Route name="saved" handler={Feed} />
+		<Route name="search" handler={Feed} />
 		<Redirect from="/" to="/inbox" />
 	</Route>
 )
