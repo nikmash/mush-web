@@ -11,10 +11,7 @@ section.feed > ul > li {
     padding-bottom: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid #EDEDED;
-    border-left: 4px solid transparent;    /*padding-left: 20px;*/
-}
-section.feed > ul > li.active {
-    border-left-color: #161A1E;
+    cursor: pointer;
 }
 section.feed > ul > li > img {
     width: auto;
@@ -28,57 +25,24 @@ section.feed > ul > li > summary {
     flex-direction: column;
     color: #161A1E;
 }
-section.feed > ul > li.read > summary > h1 {
-
-    /*color: #999;*/
-}
 section.feed > ul > li > summary > h1 {
     font-weight: 600;
-    transition: 300ms all;
     font-size: 1.4em;
     margin-bottom: 5px;
     line-height: 1.3em;
-    cursor: pointer;
 }
 section.feed > ul > li > summary > h2 {
     color: #999;
     margin-bottom: 10px;
 }
-section.feed > ul > li.read > summary > h2 > a.read {
-    display: none;
-}
-section.feed > ul > li > summary > h2 > a.tag {
-    background: transparent;
-    color: #161A1E;
-    border: 1px solid;
-}
-section.feed > ul > li > summary > h2 > a {
-    opacity: 1;
-    transition: 300ms all;
-    display: inline-block;
-    cursor: pointer;
-    text-transform: uppercase;
-    background: #3498db;
-    color: white;
-    font-size: 0.6em;
-    padding: 5px 8px;
-    margin-left: 10px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    position: relative;
-    top: -2px;
-}
 section.feed > ul > li > summary ul.users {
     display: flex;
     color: #999;
-    flex-wrap: wrap;
 }
 section.feed > ul > li > summary ul.users li {
     display: flex;
     align-items: center;
     margin-right: 30px;
-    margin-bottom: 20px;
 }
 section.feed > ul > li > summary ul.users img {
     width: 40px;
