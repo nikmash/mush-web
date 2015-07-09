@@ -1,0 +1,45 @@
+section.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.login .wrap {
+    width: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+section.login  h1 {
+    color: white;
+    padding: 80px 60px 20px;
+    background: #262B2F;
+    font-size: 2.5em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+}
+section.login .wrap form {
+    padding: 30px 60px;
+    overflow: hidden;
+}
+section.login .wrap form input {
+    width: 100%;
+    padding: 10px 0px 15px;
+    margin-bottom: 30px;
+    border: 0px;
+    border-bottom: 1px solid #CBCBCB;
+}
+section.login .wrap form input:focus {
+    border-bottom: 1px solid black;
+}
+section.login .wrap form a {
+    background: #262B2F;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 500;
+    float: right;
+    cursor: pointer;
+}

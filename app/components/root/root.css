@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
+    border-color: #EDEDED !important;
 }
 input:focus, select:focus {
     outline: 0;
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 section.root {
     position: absolute;
@@ -13,4 +15,18 @@ section.root {
     left: 0px;
     bottom: 0px;
     right: 0px;
+}
+body {
+    color: #262B2F;
+    font-family: 'Roboto';
+}
+.content {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0px 60px;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
