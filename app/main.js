@@ -9,7 +9,7 @@ import Root from "root"
 import Axios from "axios"
 
 Axios.interceptors.request.use(function(config) {
-	config.url = "http://api.ironbay.digital/" + config.url;
+	config.url = "http://mush.io/api/" + config.url;
 	return config
 })
 
