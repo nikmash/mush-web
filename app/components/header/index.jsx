@@ -12,6 +12,7 @@ export default class Header {
 				<nav className='content'>
 					<Link to='/inbox'>Inbox</Link>
 					<Link to='/outbox'>Outbox</Link>
+					<Link to='/saved'>Saved</Link>
 					<a target='_blank' href='https://chrome.google.com/webstore/detail/mush/kfgjjanhodaoongmigihfkakpjphmnjf'>Get Chrome Extension</a>
 				</nav>
 			</header>

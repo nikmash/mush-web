@@ -2,43 +2,45 @@ section.feed {
     margin-top: 60px;
 }
 section.feed > ul > li {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
     display: flex;
     flex-direction: row;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid;
+
     align-items: center;
 }
 section.feed > ul > li .details {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    flex-grow: 1;
 }
 section.feed > ul > li .details h1 {
+    margin-bottom: 5px;
     font-weight: 600;
     font-size: 1.4em;
-    margin-bottom: 5px;
-    line-height: 1.3em;
+    line-height: 1.4em;
 }
 section.feed > ul > li > a {
     display: block;
-    height: 100px;
     margin-left: 30px;
+    height: 100px;
 }
 section.feed > ul > li > a img {
+    width: auto;
     height: 100%;
-    width: auto;
 }
 section.feed > ul > li .details h2 {
+    margin-bottom: 12px;
     color: #999;
-    margin-bottom: 12px;
 }
 section.feed > ul > li ul.taggers {
     display: flex;
 }
 section.feed > ul > li ul.taggers li img {
+    margin-right: 15px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 15px;
 }
