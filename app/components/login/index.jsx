@@ -14,7 +14,7 @@ export default class Login extends React.Component {
 					<h1 className="test">Welcome Back!</h1>
 					<form>
 						<input ref="email" placeholder="email" type="text" />
-						<input ref="password" placeholder="password" type="password" />
+						<input onKeyPress={this.handleKeyPress} ref="password" placeholder="password" type="password" />
 					<a onClick={this.login}>Login</a>
 					</form>
 				</div>
@@ -26,5 +26,10 @@ export default class Login extends React.Component {
 		const password = this.refs.password.getDOMNode().value
 		const { dispatch } = this.props
 		dispatch(Auth.login(email, password))
+	}
+	handleKeyPress = (e) => {
+		if (e.which === 13) {
+			this.login()
+		}
 	}
 }
